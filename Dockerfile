@@ -8,8 +8,8 @@ RUN pip install fastai
 RUN pip install starlette uvicorn python-multipart aiohttp
 
 #Add in files
-ADD camelidentify.py camelidentify.py
-ADD usa-inaturalist-cats.pth usa-inaturalist-cats.pth
+COPY camelidentify.py camelidentify.py
+COPY camelid.pth camelid.pth
 
 # Run to trigger installation
 RUN python camelidentify.py
