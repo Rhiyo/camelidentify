@@ -42,7 +42,7 @@ camelid_data = ImageDataBunch.from_name_re(
 )
 camelid_learner = ConvLearner(cat_data, models.resnet34)
 camelid_learner.model.load_state_dict(
-    torch.load("camelid.pth", map_location="cpu")
+    torch.load("camelid.pkl", map_location="cpu")
 )
 
 
