@@ -2,7 +2,7 @@ from starlette.applications import Starlette
 from starlette.responses import JSONResponse, HTMLResponse, RedirectResponse
 from fastai.vision import (
     ImageDataBunch,
-    ConvLearner,
+    create_cnn,
     open_image,
     get_transforms,
     models,
@@ -40,7 +40,7 @@ camelid_data = ImageDataBunch.from_name_re(
     ds_tfms=get_transforms(),
     size=224,
 )
-camelid_learner = ConvLearner(cat_data, models.resnet34)
+camelid_learner = create_cnn(cat_data, models.resnet34)
 camelid_learner.model.load_state_dict(
     torch.load("camelid.pkl", map_location="cpu")
 )
