@@ -1,8 +1,9 @@
 from starlette.applications import Starlette
 from starlette.responses import JSONResponse, HTMLResponse, RedirectResponse
 from fastai.vision import (
-    ImageDataBunch,
-    create_cnn,
+    #ImageDataBunch,
+    #create_cnn,
+    load_learner,
     open_image,
     get_transforms,
     models,
