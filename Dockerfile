@@ -9,7 +9,7 @@ RUN pip install starlette uvicorn python-multipart aiohttp
 
 #Add in files
 COPY camelidentify.py camelidentify.py
-COPY camelid.pth camelid.pth
+COPY camelid.pkl camelid.pkl
 
 # Run to trigger installation
 RUN python camelidentify.py
