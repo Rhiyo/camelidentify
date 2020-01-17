@@ -33,13 +33,13 @@ camelid_fnames = [
         "Alpaca",
     ]
 ]
-camelid_data = ImageDataBunch.from_name_re(
-    camelid_images_path,
-    camelid_fnames,
-    r"/([^/]+)_\d+.jpg$",
-    ds_tfms=get_transforms(),
-    size=224,
-)
+#camelid_data = ImageDataBunch.from_name_re(
+#    camelid_images_path,
+#    camelid_fnames,
+#    r"/([^/]+)_\d+.jpg$",
+#    ds_tfms=get_transforms(),
+#    size=224,
+#)
 #camelid_learner = create_cnn(cat_data, models.resnet34)
 #camelid_learner.model.load_state_dict(
 #    torch.load("camelid.pkl", map_location="cpu")
